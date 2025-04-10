@@ -12,6 +12,8 @@ import Contact from "./pages/Contact";
 import Feedback from "./pages/Feedback";
 import Learning from "./pages/Learning";
 import CompanyProfile from "./pages/CompanyProfile";
+import DeviceSmartphone from "./pages/DeviceSmartphone";
+import DeviceTelevision from "./pages/DeviceTelevision";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +31,8 @@ const App = () => (
           <Route path="/feedback" element={<Feedback />} />
           <Route path="/courses" element={<Learning />} />
           <Route path="/about" element={<CompanyProfile />} />
+          <Route path="/devices/smartphone" element={<DeviceSmartphone />} />
+          <Route path="/devices/television" element={<DeviceTelevision />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

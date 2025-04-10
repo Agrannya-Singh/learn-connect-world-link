@@ -2,11 +2,14 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
-import { BookOpen, Users, MessageSquare, Heart, Sparkles } from "lucide-react";
+import { BookOpen, Users, MessageSquare, Heart, Sparkles, Smartphone, Tv } from "lucide-react";
+import MainNavigation from "@/components/MainNavigation";
 
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-background via-accent/10 to-background">
+      <MainNavigation />
+      
       <div className="flex-grow flex items-center justify-center p-4">
         <div className="text-center max-w-4xl">
           <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
@@ -35,7 +38,7 @@ const Index = () => {
             </Link>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
             <Card className="bg-card/80 backdrop-blur-sm border-2 border-border hover:border-primary/50 transition-colors">
               <CardContent className="p-6 flex flex-col items-center text-center">
                 <div className="bg-primary/10 p-3 rounded-full mb-4">
@@ -71,6 +74,37 @@ const Index = () => {
                 </p>
               </CardContent>
             </Card>
+          </div>
+          
+          <h2 className="text-2xl font-semibold mb-4">Explore Device Technology</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link to="/devices/smartphone" className="block">
+              <Card className="bg-card/80 backdrop-blur-sm border-2 border-border hover:border-primary/50 transition-colors h-full">
+                <CardContent className="p-6 flex flex-col items-center text-center">
+                  <div className="bg-primary/10 p-3 rounded-full mb-4">
+                    <Smartphone className="h-8 w-8 text-primary" />
+                  </div>
+                  <h2 className="text-xl font-semibold mb-2">Smartphone Technology</h2>
+                  <p className="text-muted-foreground">
+                    Learn about the components that power modern smartphones.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
+            
+            <Link to="/devices/television" className="block">
+              <Card className="bg-card/80 backdrop-blur-sm border-2 border-border hover:border-primary/50 transition-colors h-full">
+                <CardContent className="p-6 flex flex-col items-center text-center">
+                  <div className="bg-primary/10 p-3 rounded-full mb-4">
+                    <Tv className="h-8 w-8 text-primary" />
+                  </div>
+                  <h2 className="text-xl font-semibold mb-2">Television Components</h2>
+                  <p className="text-muted-foreground">
+                    Discover the technology behind modern television displays.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
           </div>
         </div>
       </div>
