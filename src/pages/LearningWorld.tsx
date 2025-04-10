@@ -114,7 +114,7 @@ const LearningWorld = () => {
         &copy; 2025 Agrannya's Learning World. All rights reserved. ♫
       </footer>
 
-      <style jsx>{`
+      <style dangerouslySetInnerHTML={{__html: `
         @keyframes floatNote {
           0% {
             transform: translateY(0) rotate(0deg);
@@ -149,7 +149,7 @@ const LearningWorld = () => {
           0% { transform: translateX(100%); }
           100% { transform: translateX(-100%); }
         }
-      `}</style>
+      `}} />
     </div>
   );
 };
